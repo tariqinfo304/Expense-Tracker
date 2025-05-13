@@ -28,7 +28,8 @@ const ExpenseList = () => {
         alert('Please log in to view expenses');
         window.location.href = '/login';
       } else {
-        alert('Error fetching expenses');
+        // alert('Error fetching expenses');
+        console.error('Error fetching expenses:', error.response?.data || error.message);
       }
     }
   };
@@ -39,7 +40,7 @@ const ExpenseList = () => {
       setExpenses(expenses.filter((expense) => expense.id !== id));
     } catch (error) {
       console.error('Error deleting expense:', error.response?.data || error.message);
-      alert('Error deleting expense');
+      // alert('Error deleting expense');
     }
   };
 
@@ -66,7 +67,7 @@ const ExpenseList = () => {
       setEditForm({ amount: '', category: '', date: '', description: '' }); 
     } catch (error) {
       console.error('Error updating expense:', error.response?.data || error.message);
-      alert('Error updating expense');
+      // alert('Error updating expense');
     }
   };
 

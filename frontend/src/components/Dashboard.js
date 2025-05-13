@@ -47,7 +47,7 @@ const Dashboard = () => {
       setReport(res.data);
     } catch (error) {
       console.error('Error fetching report:', error.response?.data || error.message);
-      alert('Error fetching report');
+      // alert('Error fetching report');
     }
   };
 

@@ -17,7 +17,8 @@ const ExpenseForm = ({ onAdd }) => {
       setDate('');
       setDescription('');
     } catch (error) {
-      alert('Error adding expense');
+      // alert('Error adding expense');
+      console.error('Error adding expense:', error.response?.data || error.message);
     }
   };
 
